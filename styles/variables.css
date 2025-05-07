@@ -2,3 +2,23 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+:root {
+  --font-family: 'IBM Plex mono', sans-serif;
+  --font-weight-bold: 700;
+  --font-weight-regular: 400;
+  --bg-image: url(../images/cover-image-dark.png);
+  --bg-color: #000028;
+  --accent-color: #ff0070;
+  --content-font-size: 18px;
+  --content-text-color: #F1B2CE;
+  --title-text-color: #000028;
+  --line-height: 23.4px;
+  --margin-padding: 10px;
+  --color-header-footer: #db00ff;
+}
+
+@media (width >= 750px) {
+  :root {
+    --margin-padding: 20px;
+  }
+}
