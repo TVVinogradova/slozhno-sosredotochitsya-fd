@@ -40,7 +40,7 @@
     --font-weight-bold: 700;
     --font-weight-regular: 400;
     --bg-image: url(../images/cover-image-light.png);
-    --bg-color: #F1B2CE;
+    --bg-color: #fff1f7;
     --accent-text-color: #353430;
     --accent-bg-color: #ff8dcb;
     --content-font-size: 18px;
@@ -55,4 +55,10 @@
    .accent-theme-dark::after {
     display: none;
    }
+}
+
+@media (width >= 750px) {
+  :root.theme-light {
+    --margin-padding: 20px;
+  }
 }
