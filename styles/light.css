@@ -60,6 +60,7 @@
     :root {
       --margin-padding: 20px;
     }
+  }
 }
 
 @media (width >= 750px) {
