@@ -388,6 +388,5 @@ a:focus {
 
   .content__section-what .content__text-title {
     grid-row: 2;
-    word-break: normal;
   }
 }

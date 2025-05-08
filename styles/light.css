@@ -55,6 +55,11 @@
    .accent-theme-dark::after {
     display: none;
    }
+
+   @media (width >= 750px) {
+    :root {
+      --margin-padding: 20px;
+    }
 }
 
 @media (width >= 750px) {
