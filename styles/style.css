@@ -15,6 +15,7 @@
   color: var(--accent-text-color);
   display: flex;
   gap: 10px;
+  text-transform: uppercase;
 }
 
 .accent-theme-dark::after {
@@ -23,12 +24,12 @@
   width: 9px;
   height: 9px;
   border-radius: 50%;
-  filter: blur(1px);
   background-color: var(--accent-bg-color);
+  box-shadow: 0px 0px 4px 2px var(--accent-bg-color);
   align-self: center;
 }
 
-.decor-border-top::after {
+.decorated-zone::after {
   content: '';
   position: absolute;
   top: 10px;
@@ -39,7 +40,7 @@
   border-right: 1px solid var(--accent-text-color);
 }
 
-.decor-border-bottom::before {
+.decorated-zone::before {
   content: '';
   position: absolute;
   bottom: 10px;
@@ -67,11 +68,12 @@
   color: var(--accent-text-color);
   border: none;
   background-color: transparent;
-  font-family: var(--font-family);
+  font-family: var(--font-family), monospace;
   text-transform: lowercase;
   font-size: var(--content-font-size);
   line-height: 18px;
   padding-inline: 13px;
+  cursor: pointer;
 }
 
 .header__theme-menu-button:hover {
@@ -121,7 +123,7 @@ main {
 }
 
 .content__section-title {
-  font-family: var(--font-family);
+  font-family: var(--font-family), monospace;
   font-size: var(--content-font-size);
   font-weight: var(--font-weight-bold);
   color: var(--accent-text-color);
@@ -130,7 +132,7 @@ main {
 }
 
 .content__text-title {
-  font-family: var(--font-family);
+  font-family: var(--font-family), monospace;
   font-size: var(--content-font-size);
   font-weight: var(--font-weight-bold);
   background-color: var(--accent-bg-color);
@@ -146,7 +148,7 @@ main {
 }
 
 .content__text {
-  font-family: var(--font-family);
+  font-family: var(--font-family), monospace;
   font-size: var(--content-font-size);
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height);
@@ -161,7 +163,7 @@ main {
 
 a {
   text-decoration: none;
-  text-shadow: 1px 1px 0 var(--accent-bg-color);
+  text-shadow: 2px 2px 0 var(--accent-bg-color);
 }
 
 a:hover {
@@ -188,10 +190,15 @@ a:focus {
   padding-block-end: 40px;
   gap: 10px;
 }
-
+/*разобраться с шириной*/
 .image {
   width: calc(100vw - var(--margin-padding) * 2);
+  object-fit: cover;
+  max-height: 100%;
+  height: 100%;
+  width: 100%;
 }
+
 
 .footer {
   position: relative;
@@ -213,7 +220,7 @@ a:focus {
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
-  font-family: var(--font-family);
+  font-family: var(--font-family), monospace;
   background-color: var(--bg-color);
   background-image: var(--bg-image);
   background-position: center;
@@ -224,7 +231,6 @@ a:focus {
 @media (width >= 750px) {
   .header {
     grid-template-columns: 1fr 1fr;
-    min-height: 1024px;
     padding: var(--margin-padding);
   }
   
@@ -336,17 +342,6 @@ a:focus {
     grid-column-end: 4;
   }
 
-  .image {
-    object-fit: cover;
-    max-height: 100%;
-    height: 100%;
-    width: 100%;
-  }
-
-  .footer {
-    min-height: 768px;
-  }
-
   .footer__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
@@ -355,7 +350,6 @@ a:focus {
 @media (width >= 1000px) {
   .header {
     padding: var(--margin-padding);
-    min-height: 768px;
   }
 
   .header__theme-menu {
