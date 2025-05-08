@@ -12,7 +12,7 @@
   position: absolute;
   top: 10px;
   right: 19px;
-  color: var(--accent-color);
+  color: var(--accent-text-color);
   display: flex;
   gap: 10px;
 }
@@ -24,7 +24,7 @@
   height: 9px;
   border-radius: 50%;
   filter: blur(1px);
-  background-color: var(--accent-color);
+  background-color: var(--accent-bg-color);
   align-self: center;
 }
 
@@ -35,8 +35,8 @@
   right: 10px;
   width: 25px;
   height: 25px;
-  border-top: 1px solid var(--accent-color);
-  border-right: 1px solid var(--accent-color);
+  border-top: 1px solid var(--accent-text-color);
+  border-right: 1px solid var(--accent-text-color);
 }
 
 .decor-border-bottom::before {
@@ -46,8 +46,8 @@
   left: 10px;
   width: 25px;
   height: 25px;
-  border-bottom: 1px solid var(--accent-color);
-  border-left: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--accent-text-color);
+  border-left: 1px solid var(--accent-text-color);
   align-self: flex-end;
 }
 
@@ -64,7 +64,7 @@
 }
 
 .header__theme-menu-button {
-  color: var(--accent-color);
+  color: var(--accent-text-color);
   border: none;
   background-color: transparent;
   font-family: var(--font-family);
@@ -76,16 +76,16 @@
 
 .header__theme-menu-button:hover {
   outline: none;
-  border: 1px solid rgba(255, 0, 112, 0.4);
+  border: 1px solid var(--accent-text-color), transparent 40%;
 }
 
 .header__theme-menu-button:focus-visible {
   outline: none;
-  border-bottom: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--accent-text-color);
 }
 
 .header__theme-menu-item:has(.header__theme-menu-button_active) {
-  border: 1px solid var(--accent-color);  
+  border: 1px solid var(--accent-text-color);
 }
 
 .header__title {
@@ -94,18 +94,22 @@
   font-weight: var(--font-weight-bold);
   line-height: 83%;
   color: var(--color-header-footer);
-  text-shadow: 4px 4px 0 var(--accent-color);
+  text-shadow: 4px 4px 0 var(--accent-bg-color);
 }
 
 .text-decor {
   grid-row: 3;
   font-size: var(--content-font-size);
   font-weight: var(--font-weight-bold);
-  background-color: var(--accent-color);
+  background-color: var(--accent-bg-color);
   height: min-content;
   line-height: var(--line-height);
   align-self: center;
   color: var(--title-text-color);
+}
+
+main {
+  padding-inline: var(--margin-padding);
 }
 
 .content__section-why,
@@ -114,14 +118,13 @@
 .gallery {
   display: grid;
   grid-template-columns: 1fr;
-  margin-inline: var(--margin-padding);
 }
 
 .content__section-title {
   font-family: var(--font-family);
   font-size: var(--content-font-size);
   font-weight: var(--font-weight-bold);
-  color: var(--accent-color);
+  color: var(--accent-text-color);
   line-height: var(--line-height);
   padding-block-end: 20px;
 }
@@ -130,13 +133,13 @@
   font-family: var(--font-family);
   font-size: var(--content-font-size);
   font-weight: var(--font-weight-bold);
-  background-color: var(--accent-color);
+  background-color: var(--accent-bg-color);
   line-height: var(--line-height);
   color: var(--title-text-color);
 }
 
 .content__text-accent {
-  background-color: var(--accent-color);
+  background-color: var(--accent-bg-color);
   font-weight: var(--font-weight-regular);
   color: var(--title-text-color);
   font-size: var(--content-font-size);
@@ -158,17 +161,17 @@
 
 a {
   text-decoration: none;
-  text-shadow: 1px 1px 0 var(--accent-color);
+  text-shadow: 1px 1px 0 var(--accent-bg-color);
 }
 
 a:hover {
   outline: none;
-  border-bottom: 1px solid #f1b2ce;
+  border-bottom: 1px solid var(--content-text-color);
 }
 
 a:focus {
   outline: none;
-  border: 1px solid #f1b2ce;
+  border: 1px solid var(--content-text-color);
 }
 
 .content__section-why {
@@ -204,7 +207,7 @@ a:focus {
   color: var(--color-header-footer);
   justify-self: center;
   align-self: center;
-  text-shadow: 2px 2px 0 var(--accent-color);
+  text-shadow: 2px 2px 0 var(--accent-bg-color);
   margin: var(--margin-padding);
 }
 
@@ -269,8 +272,8 @@ a:focus {
 
   .content__section-what,
   .content__section-how {
-  padding-block-start: 60px;
-}
+    padding-block-start: 60px;
+  }
 
   .content__section-what .content__section-title {
     display: grid;

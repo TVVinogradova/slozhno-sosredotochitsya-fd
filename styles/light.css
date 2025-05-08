@@ -14,7 +14,8 @@
     --font-weight-regular: 400;
     --bg-image: url(../images/cover-image-light.png);
     --bg-color: #F1B2CE;
-    --accent-color: #ff8dcb;
+    --accent-text-color: #353430;
+    --accent-bg-color: #ff8dcb;
     --content-font-size: 18px;
     --content-text-color: #353430;
     --title-text-color: #353430;
@@ -28,6 +29,11 @@
   /* Вам также нужно будет написать ряд подобных селекторов */
 }
 
+.theme-light .accent-theme-dark,
+.theme-light .accent-theme-dark::after {
+ display: none;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     --font-family: 'IBM Plex mono', sans-serif;
@@ -35,51 +41,18 @@
     --font-weight-regular: 400;
     --bg-image: url(../images/cover-image-light.png);
     --bg-color: #F1B2CE;
-    --accent-color: #ff8dcb;
+    --accent-text-color: #353430;
+    --accent-bg-color: #ff8dcb;
     --content-font-size: 18px;
     --content-text-color: #353430;
     --title-text-color: #353430;
     --line-height: 23.4px;
     --margin-padding: 10px;
     --color-header-footer: #ffc2e6;
-  }
-}
+   }
 
-.theme-light .header__theme-menu-button,
-.theme-light .content__section-title,
-.theme-light .decor-border-top::after,
-.theme-light .decor-border-bottom::before {
-  color: var(--accent-color);
-  --accent-color: #353430;
- }
-
- .theme-light .accent-theme-dark,
- .theme-light .accent-theme-dark::after {
-  display: none;
- }
-
- .theme-light .header__theme-menu-button:hover {
-  outline: none;
-  border: 1px solid rgba(50, 49, 45, 0.4);
-}
-
-.header__theme-menu-button:focus-visible {
-  outline: none;
-  border-bottom: 1px solid var(--accent-color);
-  --accent-color: #353430;
-}
-
-.theme-light a:hover {
-  outline: none;
-  border-bottom: 1px solid #353430;
-}
-
-a:focus {
-  outline: none;
-  border: 1px solid #353430;
-}
-
-.theme-light .header__theme-menu-item:has(.header__theme-menu-button_active) {
-  border: 1px solid var(--accent-color);  
-  --accent-color: #353430;
+   .accent-theme-dark,
+   .accent-theme-dark::after {
+    display: none;
+   }
 }
