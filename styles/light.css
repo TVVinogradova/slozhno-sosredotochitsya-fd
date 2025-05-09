@@ -13,7 +13,7 @@
     --font-weight-bold: 700;
     --font-weight-regular: 400;
     --bg-image: url(../images/cover-image-light.png);
-    --bg-color: #F1B2CE;
+    --bg-color: #fff1f7;
     --accent-text-color: #353430;
     --accent-bg-color: #ff8dcb;
     --content-font-size: 18px;
@@ -32,6 +32,11 @@
 .theme-light .accent-theme-dark,
 .theme-light .accent-theme-dark::after {
  display: none;
+}
+
+.theme-light .header__theme-menu-button:hover {
+  outline: none;
+  border: 1px solid rgba(50, 49, 45, 0.4);
 }
 
 @media (prefers-color-scheme: light) {
@@ -61,6 +66,11 @@
       --margin-padding: 20px;
     }
   }
+
+  .header__theme-menu-button:hover {
+  outline: none;
+  border: 1px solid rgba(50, 49, 45, 0.4);
+}
 }
 
 @media (width >= 750px) {

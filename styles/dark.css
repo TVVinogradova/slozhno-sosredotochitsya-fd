@@ -33,6 +33,11 @@
  display: flex;
 }
 
+.theme-dark .header__theme-menu-button:hover {
+  outline: none;
+  border: 1px solid rgba(255, 0, 112, 0.4);
+}
+
 @media (width >= 750px) {
   :root.theme-dark {
     --margin-padding: 20px;
