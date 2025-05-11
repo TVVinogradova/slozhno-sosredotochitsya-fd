@@ -352,10 +352,10 @@ a:focus {
   }
 
   .content__section-what {
-    grid-template-columns: repeat(3, 315px);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: min-content;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: stretch;
   }
 
   .content__section-what .content__section-title {
